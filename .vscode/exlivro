@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <ctype.h>
+/*Implemente uma função que receba uma string como parâmetro e retorne como resultado o número
+ de vogais nessa string. 
+Essa função deve obedecer ao protótipo:int conta vogais (char* str)*/
+
+int conta_vogais(char* str);
+
+int main()
+{
+    char str[]= marcos;
+    printf("a quantidade de vogais na string %s é %d\n", str, conta_vogais(str))
+    return 0;
+}
+int conta_vogais(char* str)
+{
+    int i=0;
+    int count=0;
+
+    while(str[i] != '\0')
+    {
+        char c = tolower(str[i]); //convente o caractere para minusculo
+        if(c=='a' || c== 'e' || c == 'i' || c == 'o' || c == 'u')
+        {
+            count++;
+        }
+        i++;
+    }
+    return count;
+}
